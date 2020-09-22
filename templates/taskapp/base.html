@@ -11,32 +11,8 @@
     <title>Dockerized</title>
   </head>
 <body class="text-center">
-  <ul class="nav nav-tabs nav-fill">
-    <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-    </li>
-    {% if user.is_authenticated %}
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'mycontainers' %}">My Containers</a>
-        </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'create' %}">Create Containers</a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'logout' %}">Log out</a>
-        </li>
-    {% else %}
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'register' %}">Register</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">Log in</a>
-        </li>
-    {% endif %}  
-  </ul>
-
+{% include 'taskapp/_nav.html' %}
 
 <div class='container mt-5'>
   <table class="table">
