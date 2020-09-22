@@ -45,6 +45,7 @@
       <th scope="col">#</th>
       <th scope="col">Container Name</th>
       <th scope="col">Image</th>
+      <th scope="col">Status</th>
       <th scope="col">User</th>
     </tr>
   </thead>
@@ -54,6 +55,7 @@
       <th class="counterCell" scope="row"></th>
       <td>{{instance.ContainerName}}</td>
       <td>{{instance.image}}</td>
+      <td>{{instance.status}}</td>
       <td>{% for user in instance.user.all %}
             {{user.username}}
           {% endfor %}</td>
