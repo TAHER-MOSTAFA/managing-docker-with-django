@@ -4,5 +4,5 @@
 2- Make sure that redis server is running port 6379
 
 
-3- run celery worker localy-to view celery-:
+3- run celery worker localy:
         $ celery -A task  worker -l info
