@@ -5,4 +5,5 @@ from .celery_helpers import MakingContainer
 
 @receiver(post_save, sender=Docker)
 def task_availabilty(sender, instance, *args, **kwargs):
-    MakingContainer.apply_async(args=(instance.id,))
+    if instance.status!='Done':
+        MakingContainer.apply_async(args=(instance.id,))
